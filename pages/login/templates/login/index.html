@@ -1,0 +1,38 @@
+{% extends "global/partials/html/index.html" %}
+{% load static %}
+{% block head %}
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="{% static "global/css/global.styles.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "login/css/styles.css" %}">
+{% endblock head %}
+{% block body %}
+<div class="main">
+    <div class="login-container">
+        <form action="#" method="post">
+            <header class="head-form">
+                <h1>Login</h1>
+            </header>
+            <label for="in-email" class="lb-email">E-mail:</label>
+            <input id="in-email" type="email" placeholder="Insira seu e-mail" title="Example: example@mail.com, ..."/><br/>
+            <label for="in-passwd" class="lb-passwd">Senha:</label>
+            <input id="in-passwd" type="password" placeholder="Insira sua senha"/><br/>
+            <div class="button-container">
+                <button type="submit">Entrar</button>
+                <button type="reset" name="btn_limpar">Limpar Dados</button>
+            </div>
+            <div class="login-with">
+                {% comment %} O comando de login via google ainda não esta conectado a API do google {% endcomment %}
+                <a class="with-google" href="https://accounts.google.com/signin/" title="Entrar com Google"></a>
+            </div>
+        </form>
+    </div>
+    <div class="ad">
+        <div class="ad-img"></div>
+        <div class="ad-content">
+            <h1>Vai dar certo! </h1>
+        </div>
+    </div>
+</div>
+ {% comment %} <div class="image-container">
+    <img src="{% static "global/img/exemplosites.gif" %}"> {% endcomment %}
+</div>{% endblock body %}

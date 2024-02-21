@@ -1,0 +1,18 @@
+{% include "global/partials/html/index.html" %}
+{% load static %}
+{% block head %}
+    <title>Building Page</title>
+    <link rel="stylecheet" href=""/>
+{% endblock head %}
+{% block body %}
+<main>
+    <header>
+        <nav></nav>
+    </header>
+    <div class="container">
+        <div class="nav-left">Left</div>
+        <div id="editor">Middle</div>
+        <div class="nav-right">Right</div>
+    </div>
+</main>
+{% endblock body %}
